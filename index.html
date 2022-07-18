@@ -771,22 +771,22 @@
 
         <div class="row no-gutters block-9 middle">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-4 p-md-5 contact-form" method="post"  role="form" >
+            <form action="mailto:balachara26@gmail.com" class="bg-light p-4 p-md-5 contact-form" method="post"  role="form" >
               <div class="form-group">
-                <input type="text" class="form-control name" placeholder="Your Name" id="name" name="name" required>
+                <input type="text" class="form-control" placeholder="Your Name" id="name" name="name" required>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control email" placeholder="Your Email" name="email" id="email">
+                <input type="email" class="form-control" placeholder="Your Email" name="email" id="email">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control subject" placeholder="Subject" name="subject" id="subject">
+                <input type="text" class="form-control" placeholder="Subject" name="subject" id="subject">
               </div>
               <div class="form-group">
-                <textarea  id="message" cols="30" rows="7" class="form-control message" placeholder="Message"></textarea>
+                <textarea  id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
-                <!-- <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" onclick="send(event)"> -->
-				<button type="submit" value="Send Message" class="btn btn-primary py-3 px-5" onsubmit="sendEmail" id="btn">SEND</button>
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+				<!-- <button type="submit" value="Send Message" class="btn btn-primary py-3 px-5"  id="btn">SEND</button> -->
               </div>
             </form>
           
@@ -898,30 +898,8 @@
   })
 });
   </script>
-  <script src="https://smtpjs.com/v3/smtp.js">
-</script>
+ 
 
-    <script>
-		var btn = document.getElementById('btn');
-		btn.addEventListener('click',function(e){
-			e.preventDefault()
-			var name = document.getElementById('name').value;
-			var email = document.getElementById('email').value;
-			var subject = document.getElementById('subject').value;
-			var message = document.getElementById('message').value;
-			var body = 'name: ' +name + '<br/> email: ' + email + '<br/> subject: ' + subject + '<br/> message: s' + message;
-			Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "balachara26@gmail.com",
-    Password : "625FB81C52B4205D5C2579E06AB54DBF3C54",
-    To : 'balachara26@gmail.com',
-    From : email,
-    Subject : subject,
-    Body : body
-}).then(
-  message => alert(message)
-);
-		})
-	</script>
+    
   </body>
 </html>
